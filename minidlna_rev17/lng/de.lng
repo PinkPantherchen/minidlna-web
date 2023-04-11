@@ -1,0 +1,54 @@
+<?php
+$mlng['lang']     = 'Sprache';
+$mlng['head']     = 'MINI DLNA - Weboberfl&auml;che';
+$mlng['title']    = 'MINIDLNA-Viewer';
+$mlng['db']       = 'SQLite3 Datenbank';
+$mlng['style']    = 'Aussehen';
+$mlng['search']   = 'Suchen';
+$mlng['search_c'] = 'Alle';
+$mlng['sort']     = 'Sortieren';
+$mlng['sort_c']   = 'Pfad';
+$mlng['artist']   = 'Artist';
+$mlng['genre']    = 'Genre';
+$mlng['downloal'] = 'Datei von [PATH] herunterladen';
+$mlng['download'] = 'Datei herunterladen';
+// Administration
+$mlng['edit_setting']     = 'Systemeinstellungen bearbeiten';
+$mlng['edit_cfg1']        = '<h2><u>Datei:</u> <b>inc/config.inc.php</b></h2>';
+$mlng['edit_cfg1_true']   = '<h2><u>inc/config.inc.php:</u> <b style="color: #007700;">wurde erfolgreich geschrieben!</b></h2>';
+$mlng['edit_cfg1_false1'] = '<h2><u>inc/config.inc.php:</u> <b style="color: #777700;">musste nicht umgeschrieben werden!</b></h2>';
+$mlng['edit_cfg1_false2'] = '<h2><u>inc/config.inc.php:</u> <b style="color: #770000;">konnte nicht geschieben werden!</b></h2>';
+$mlng['edit_db']          = 'Datenbank-Pfad:';
+$mlng['edit_db_desc']     = '(Absoluter Pfad zur Datenbank)';
+$mlng['edit_sql']         = 'Debug-SQL:';
+$mlng['edit_sql_desc']    = '(SQL-Queries anzeigen)';
+$mlng['edit_sql_true']    = 'Ja | ';
+$mlng['edit_sql_false']   = 'Nein';
+$mlng['edit_fdown']       = 'Datei Download:';
+$mlng['edit_fdown_desc']  = '(Sollen einzelne Dateien herunterladbar sein)';
+$mlng['edit_fdown_true']  = 'Ja | ';
+$mlng['edit_fdown_false'] = 'Nein';
+$mlng['edit_jdown']       = 'Container:';
+$mlng['edit_jdown_desc']  = '(Sollen Container (DLC/CCF/RSDF) erzeugt werden)';
+$mlng['edit_jdown_true']  = 'Ja | ';
+$mlng['edit_jdown_false'] = 'Nein';
+$mlng['edit_cfg2']        = '<h2><u>Datei:</u> <b>script/dlcapi.class.php</b></h2>';
+$mlng['edit_cfg2_true']   = '<h2><u>script/dlcapi.class.php:</u> <b style="color: #007700;">wurde erfolgreich geschrieben!</b></h2>';
+$mlng['edit_cfg2_false1'] = '<h2><u>script/dlcapi.class.php:</u> <b style="color: #777700;">musste nicht umgeschrieben werden!</b></h2>';
+$mlng['edit_cfg2_false2'] = '<h2><u>script/dlcapi.class.php:</u> <b style="color: #770000;">konnte nicht geschieben werden!</b></h2>';
+$mlng['edit_cfid']        = 'Server ID:';
+$mlng['edit_cfid_desc']   = '(ID des Servers)';
+$mlng['edit_cfname']      = 'Server Name:';
+$mlng['edit_cfname_desc'] = '(Name des Servers)';
+$mlng['edit_cfurl']       = 'Server URL:';
+$mlng['edit_cfurl_desc']  = '(Basis-URL, inkl. http:// ohne abschliessendes /, bsp.: http://server.com)';
+$mlng['edit_cfkey']       = 'Pfad zum Server-Key:';
+$mlng['edit_cfkey_desc']  = '(SpeicherKey, absoluter Unix-Pfad, Dateimodus 777, volle Schreibrechte)';
+$mlng['edit_submit']      = 'Aktualisieren';
+$mlng['edit_selF1']       = 'Datei auswaehlen';
+// DBManager 2022
+$mlng['edit_pass']        = 'Passwort';
+$mlng['edit_pass_desc']   = 'Passwort des Datenbank-Managers';
+$mlng['edit_theme']       = 'Layout';
+$mlng['edit_theme_desc']  = 'Layout des Datenbank-Managaers';
+?>

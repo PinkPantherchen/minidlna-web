@@ -1,0 +1,54 @@
+<?php
+$mlng['lang']     = 'Language';
+$mlng['head']     = 'MINI DLNA - Webinterface';
+$mlng['title']    = 'MINIDLNA-Viewer';
+$mlng['db']       = 'SQLite3 Database';
+$mlng['style']    = 'Look';
+$mlng['search']   = 'Search';
+$mlng['search_c'] = 'all';
+$mlng['sort']     = 'Sort';
+$mlng['sort_c']   = 'Path';
+$mlng['artist']   = 'Artist';
+$mlng['genre']    = 'Genre';
+$mlng['downloal'] = 'Download file from [PATH]';
+$mlng['download'] = 'Download file';
+// Administration
+$mlng['edit_setting']     = 'Edit systemsettings';
+$mlng['edit_cfg1']        = '<h2><u>File:</u> <b>inc/config.inc.php</b></h2>';
+$mlng['edit_cfg1_true']   = '<h2><u>inc/config.inc.php:</u> <b style="color: #007700;">successfully written!</b></h2>';
+$mlng['edit_cfg1_false1'] = '<h2><u>inc/config.inc.php:</u> <b style="color: #777700;">did not have to be rewritten!</b></h2>';
+$mlng['edit_cfg1_false2'] = '<h2><u>inc/config.inc.php:</u> <b style="color: #770000;">could not be written!</b></h2>';
+$mlng['edit_db']          = 'Databasepath:';
+$mlng['edit_db_desc']     = '(Absolute path to the database)';
+$mlng['edit_sql']         = 'Debug-SQL:';
+$mlng['edit_sql_desc']    = '(Show SQL-Queries)';
+$mlng['edit_sql_true']    = 'Yes | ';
+$mlng['edit_sql_false']   = 'No';
+$mlng['edit_fdown']       = 'File download:';
+$mlng['edit_fdown_desc']  = '(Should be single files downloadable)';
+$mlng['edit_fdown_true']  = 'Yes | ';
+$mlng['edit_fdown_false'] = 'No';
+$mlng['edit_jdown']       = 'Container:';
+$mlng['edit_jdown_desc']  = '(Should a containerfile be generated (DLC/CCF/RSDF))';
+$mlng['edit_jdown_true']  = 'Yes | ';
+$mlng['edit_jdown_false'] = 'No';
+$mlng['edit_cfg2']        = '<h2><u>File:</u> <b>script/dlcapi.class.php</b></h2>';
+$mlng['edit_cfg2_true']   = '<h2><u>script/dlcapi.class.php:</u> <b style="color: #007700;">successfully written!</b></h2>';
+$mlng['edit_cfg2_false1'] = '<h2><u>script/dlcapi.class.php:</u> <b style="color: #777700;">did not have to be rewritten!</b></h2>';
+$mlng['edit_cfg2_false2'] = '<h2><u>script/dlcapi.class.php:</u> <b style="color: #770000;">could not be written!</b></h2>';
+$mlng['edit_cfid']        = 'Server ID:';
+$mlng['edit_cfid_desc']   = '(ID of the Server)';
+$mlng['edit_cfname']      = 'Server name:';
+$mlng['edit_cfname_desc'] = '(Name of the Server)';
+$mlng['edit_cfurl']       = 'Server URL:';
+$mlng['edit_cfurl_desc']  = '(Basic-URL, incl. http:// without finalizing /, ex.: http://server.com)';
+$mlng['edit_cfkey']       = 'Path to the Server-Key:';
+$mlng['edit_cfkey_desc']  = '(SaveKey, absolut unix-path, filemodus 777, full writing-right)';
+$mlng['edit_submit']      = 'Update';
+$mlng['edit_selF1']       = 'Select file';
+// DBManager 2022
+$mlng['edit_pass']        = 'Password';
+$mlng['edit_pass_desc']   = 'Password of the Databasemanager';
+$mlng['edit_theme']       = 'Theme';
+$mlng['edit_theme_desc']  = 'Theme of the Databasemanager';
+?>

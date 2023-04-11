@@ -1,0 +1,54 @@
+<?php
+$mlng['lang']     = 'Lingua';
+$mlng['head']     = 'MINI DLNA - interfaccia web';
+$mlng['title']    = 'MINIDLNA-Spettatore';
+$mlng['db']       = 'SQLite3 base di dati';
+$mlng['style']    = 'Apparizione';
+$mlng['search']   = 'Cerca';
+$mlng['search_c'] = 'tutti';
+$mlng['sort']     = 'Ordine';
+$mlng['sort_c']   = 'Percorso';
+$mlng['artist']   = 'Artist';
+$mlng['genre']    = 'Genere';
+$mlng['downloal'] = 'Scarica il file da [PATH]';
+$mlng['download'] = 'Scarica file';
+// Amministrazione
+$mlng['edit_setting']     = 'Modifica le impostazioni di sistema';
+$mlng['edit_cfg1']        = '<h2><u>File:</u> <b>inc/config.inc.php</b></h2>';
+$mlng['edit_cfg1_true']   = '<h2><u>inc/config.inc.php:</u> <b style="color: #007700;">scritto con successo!</b></h2>';
+$mlng['edit_cfg1_false1'] = '<h2><u>inc/config.inc.php:</u> <b style="color: #777700;">non ha dovuto essere riscritto!</b></h2>';
+$mlng['edit_cfg1_false2'] = '<h2><u>inc/config.inc.php:</u> <b style="color: #770000;">non potrebbe essere scritto!</b></h2>';
+$mlng['edit_db']          = 'Databasepath:';
+$mlng['edit_db_desc']     = '(Percorso assoluto al database)';
+$mlng['edit_sql']         = 'Debug-SQL:';
+$mlng['edit_sql_desc']    = '(Mostra query SQL)';
+$mlng['edit_sql_true']    = 'Sì | ';
+$mlng['edit_sql_false']   = 'No ';
+$mlng['edit_fdown']       = ' Download del file: ';
+$mlng['edit_fdown_desc']  = '(Dovrebbero essere singoli file scaricabili)';
+$mlng['edit_fdown_true']  = 'Sì | ';
+$mlng['edit_fdown_false'] = 'No ';
+$mlng['edit_jdown']       = 'Contenitore: ';
+$mlng['edit_jdown_desc']  = '(Dovrebbe essere generato un file contenitore (DLC/CCF/RSDF))';
+$mlng['edit_jdown_true']  = 'Sì | ';
+$mlng['edit_jdown_false'] = 'No ';
+$mlng['edit_cfg2']        = '<h2><u>File:</u> script/dlcapi.class.php</h2>';
+$mlng['edit_cfg2_true']   = '<h2><u>script/dlcapi.class.php:</u> <b style="color: #007700;">scritto con successo!</b></h2>';
+$mlng['edit_cfg2_false1'] = '<h2><u>script/dlcapi.class.php:</u> <b style="color: #777700;">non ha dovuto essere riscritto!</b></h2>';
+$mlng['edit_cfg2_false2'] = '<h2><u>script/dlcapi.class.php:</u> <b style="color: #770000;">non potrebbe essere scritto!</b></h2>';
+$mlng['edit_cfid']        = 'ID server:';
+$mlng['edit_cfid_desc']   = '(ID del server)';
+$mlng['edit_cfname']      = 'Nome server:';
+$mlng['edit_cfname_desc'] = '(Nome del server)';
+$mlng['edit_cfurl']       = 'URL del server:';
+$mlng['edit_cfurl_desc']  = '(URL di base, incluso http:// senza finalizzazione /,ex.: http://server.com)';
+$mlng['edit_cfkey']       = 'Percorso alla chiave del server:';
+$mlng['edit_cfkey_desc']  = '(SaveKey, absolut unix-path, filemodus 777, scrittura completa-destra)';
+$mlng['edit_submit']      = 'Aggiornare';
+$mlng['edit_selF1']       = 'Seleziona il file';
+// DBManager 2022
+$mlng['edit_pass']        = 'Password';
+$mlng['edit_pass_desc']   = 'Password del Databasemanager';
+$mlng['edit_theme']       = 'Layout';
+$mlng['edit_theme_desc']  = 'Layout del Databasemanager';
+?>
