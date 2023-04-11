@@ -66,9 +66,33 @@ function human_filesize($bytes, $dec = 2): string {
     return sprintf("%.{$dec}f %s", $bytes / (1024 ** $factor), $size[$factor]);
 }
 
-if(isset($_GET['id']) && $_GET['detail']=="false") {
-  // Liste der Dateien in einem Verzeichnis  
-  $sql = "SELECT `NAME`,`CLASS`,`OBJECT_ID`,`PATH` 
+if(empty($_REQUEST)) {
+    $sql = "SELECT `ID`,`PATH`,`SIZE`,`TIMESTAMP`,`TITLE`
+              FROM `DETAILS`
+          ORDER BY `TIMESTAMP` DESC 
+             LIMIT 30";
+    $res = $db->query($sql);
+    if($debug_sqls=='true') print $sql."<br />";
+    print "<h1>".$mlng['last_items']."</h1><br /><table><tr>";
+    print "<td class='edit_h'>".$mlng['last_time']."</td>".
+          "<td class='edit_h'>".$mlng['last_title']." / ".$mlng['last_path']."</td>".
+          "<td class='edit_h'>".$mlng['last_size']."</td>".
+          "<td class='edit_h'>".$mlng['edit_fdown']."</td></tr>";
+    while($zeilen = $res->fetchArray()) {
+        $path_info = pathinfo($zeilen['PATH']);
+        print "<tr>".
+              "<td>".date('d.m.Y H:i:s',$zeilen['TIMESTAMP'])."</td>".
+              "<td>".$zeilen['TITLE']."</td>".
+              "<td>".human_filesize($zeilen['SIZE'])."</td>".
+              "<td><a href='".$zeilen['PATH']."'>".$mlng['downloal']."</a> | ".
+              "<a href='".$server_http."/MediaItems/".$zeilen['ID'].".".$path_info['extension']."'>".$mlng['download']."</a></td></tr>".
+              "<tr><td class='last'></td><td colspan='3' class='last'>".$zeilen['PATH']."</td></tr>";
+    }
+    print "</table>";
+} elseif(isset($_GET['id']) && $_GET['detail']=="false") {
+  // Liste der Dateien in einem Verzeichnis
+  print $mlng['abfrage_liste'];  
+  $sql = "SELECT `DETAIL_ID`,`NAME`,`CLASS`,`OBJECT_ID`,`PATH` 
               FROM `OBJECTS` `OB`
          LEFT JOIN `DETAILS` `DT`
                 ON `OB`.`DETAIL_ID`=`DT`.`ID`
@@ -92,7 +116,9 @@ if(isset($_GET['id']) && $_GET['detail']=="false") {
       default:
         $downloadable = false;
     }
-    if($downloadable==true && $zeilen['PATH']!="" && $jdownload=='true') { $dlcf[$zeilen['NAME']] = $zeilen['PATH']; }
+    if($downloadable==true && $zeilen['PATH']!="" && $jdownload=='true') { 
+        $dlcf[$zeilen['DETAIL_ID']] = $zeilen['PATH'];
+    }
   }
   if(!empty($dlcf)) {
     print "<br /><br />";
@@ -106,6 +132,7 @@ if(isset($_GET['id']) && $_GET['detail']=="false") {
   }  
 } elseif(isset($_GET['id']) && $_GET['detail']=="true") {
   // Einzelnes Element => Details anzeigen
+  print $mlng['abfrage_single'];
   $sql = "SELECT * 
               FROM `OBJECTS` `OB`
          LEFT JOIN `DETAILS` `DT`
@@ -147,6 +174,7 @@ if(isset($_GET['id']) && $_GET['detail']=="false") {
   unset($_SESSION['suchen']);
   unset($_SESSION['fclass']);
   // Alle Eintraege eines Genre
+  print $mlng['abfrage_genre'];
   $sql = "SELECT `NAME`,`CLASS`,`OBJECT_ID`,`PATH`  
               FROM `OBJECTS` `OB`
          LEFT JOIN `DETAILS` `DT`
@@ -188,6 +216,7 @@ if(isset($_GET['id']) && $_GET['detail']=="false") {
   unset($_SESSION['suchen']);
   unset($_SESSION['fclass']);
   // Alle Eintraege eines Artisten
+  print $mlng['abfrage_artist'];
   $sql = "SELECT `NAME`,`CLASS`,`OBJECT_ID`,`PATH`  
               FROM `OBJECTS` `OB`
          LEFT JOIN `DETAILS` `DT`
@@ -231,6 +260,7 @@ if(isset($_GET['id']) && $_GET['detail']=="false") {
   }   
 } elseif(isset($_SESSION['suchen']) && $_SESSION['suchen']!="") {
   // Suche
+  print $mlng['abfrage_search'];
   $suchen = $_SESSION['suchen'];
   $fclass = $_SESSION['fclass']; 
   $sql = "SELECT `NAME`,`CLASS`,`OBJECT_ID`,`PATH` "; 

@@ -1,8 +1,8 @@
 <?php
 // Absoluter Pfad zur Datenbank
-$path_to_db = '/var/www/html/minidlna_v17b/db/files.db';
+$path_to_db = '/var/www/html/minidlna/db/files.db';
 // MINIDLNA-Server Webinterface (without/ohne / am Ende des Pfades
-$server_http = 'http://minidlna:8200';
+$server_http = 'http://fs1:8200';
 // Debug SQL: SQL-Queries anzeigen (true = ja, false = nein)
 $debug_sqls = 'false';
 // Show Content be downloadable (true = ja, false = nein)
