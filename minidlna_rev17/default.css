@@ -1,0 +1,129 @@
+table   {
+          width:  100%;
+          height: 100%;
+          border-spacing: 0px;
+        }
+        
+td.logo {
+          width: 170px;
+          border-bottom: 2px solid #AAAAAA;
+          text-align: center;
+        } 
+        
+td.lang {
+          text-align: right;
+          background: #DDDDDD;
+          border: 1px solid #AAAAAA;
+        }        
+        
+td.title {
+          font-family: "Monotype Corsiva", Verdana, "Monotype Corsiva";
+          color:       #45AA42;
+          font-size:   62px;
+          font-weight: bold;
+          font-style:  italic;
+          text-align:  center;
+          border-bottom: 2px solid #AAAAAA;
+        } 
+        
+td.links  {
+          border-right: 1.5px solid #AAAAAA;
+          vertical-align: top;
+       } 
+
+td.einstellungen  {
+          height: 30px;
+          border-bottom: 1.5px solid #AAAAAA;
+          white-space:  nowrap;
+          background: #45AA42;
+          color: #FFFFFF;
+        } 
+
+td.footer {
+	  border-top: 2px solid #AAAAAA;
+	  text-align: center;
+	  font-size:  12px;
+	  color: #555555;
+        } 
+
+td.main {
+          vertical-align: top;
+        }  
+        
+iframe.main_frame {
+          border: 0px;
+          width: 100%;
+          height: 520px;
+        } 
+
+/* LINKS Scrollbar */
+div.wrapper1 {
+          height: 20px;
+          width: 170px;
+          overflow-x: scroll;
+          overflow-y: hidden;          
+        }
+        
+div.wrapper2 {
+          width: 170px;
+          overflow-x: scroll;
+          overflow-y: scroll;          
+        }    
+
+
+/* abfrage.inc.php */
+td.info {
+          background: #AAAAAA;
+          font-weight: bold;
+        }            
+
+/* config.edit.inc.php */
+h1.edit {
+          text-decoration: underline;
+          color:           #45AA42;
+          font-weight:     bold;      
+        }
+
+td.edit_h {
+          border: 2px dotted #666666;
+          background-color: #BBBBBB;
+        }
+
+td.edit_t {
+          font-weight: bold;
+          background-color: #DDDDDD;
+          vertical-align: top;
+        } 
+
+td.edit_u {
+          vertical-align: top;
+        }   
+        
+td.last {
+          border-bottom: 1px solid #666666;
+        }              
+
+div.demo1 {
+				width: 200px;
+				height: 200px;
+				border-top: solid 1px #BBB;
+				border-left: solid 1px #BBB;
+				border-bottom: solid 1px #FFF;
+				border-right: solid 1px #FFF;
+				background: #FFF;
+				overflow: scroll;
+				padding: 5px;
+			}
+      
+div.demo8 {
+				width: 200px;
+				height: 200px;
+				border-top: solid 1px #BBB;
+				border-left: solid 1px #BBB;
+				border-bottom: solid 1px #FFF;
+				border-right: solid 1px #FFF;
+				background: #FFF;
+				overflow: scroll;
+				padding: 5px;
+			}       
+                                                  
