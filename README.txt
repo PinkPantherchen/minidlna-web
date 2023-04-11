@@ -9,6 +9,8 @@ Voraussetzung:
 
 Auf Ubuntu:
 PHP81 apt-get install apache2 php8.1 php8.1-sqlite3 php8.1-mbstring sqlite3
+      ACHTUNG: mcrypt muss händisch erstellt werden sonst gehn die JDOWNLOADER Dateien nicht
+               Anleitung (Ubuntu): https://php.tutorials24x7.com/blog/how-to-install-mcrypt-for-php-8-on-ubuntu-20-04-lts
 PHP8: apt-get install apache2 php8.0 php8.0-sqlite3 php8.0-mbstring sqlite3 php8.0-mcrypt
 PHP<: apt-get install apache2 php php-sqlite3 php-mbstring sqlite3 php-mcrypt
 
