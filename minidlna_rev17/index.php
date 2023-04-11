@@ -89,7 +89,7 @@ jquery-ui.1.8.js:  https://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.
 </tr>
 <tr>
  <td class="links" rowspan="3">
- <b><?php print $mlng['db']; ?></b><br />
+ <b><?php print $mlng['db']; ?></b><br /><br /><a href="."><?php print $mlng['start_page']; ?></a><br /><strong></strong>
  <div class="wrapper1">
   <div id="tree_sync" style="height: 20px;">
   <!-- Dieser Block dient der Scrollbar oberhalb des Trees -->
@@ -221,8 +221,10 @@ jquery-ui.1.8.js:  https://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.
  </td>
 </tr>
 <tr>
- <td class="footer" colspan="4"><i><b>Version:</b> Minidlna_Rev17a -  <b>Release Date:</b> 11.04.2023 02:30 - <b>Publisher:</b> 
- <a href="https://sourceforge.net/projects/minidlna-web/" target="_blank">Sourceforge</a>|<a href="https://sourceforge.net/u/paulchen2013/" target="_blank">paulchen2013</a></td> 
+ <td class="footer" colspan="4"><i><b>Version:</b> Minidlna_Rev17b -  <b>Release Date:</b> 11.04.2023 23:30 - <b>Publisher:</b> 
+ <a href="https://github.com/PinkPantherchen/minidlna-web" target="_blank">GitHub</a>|
+ <a href="https://sourceforge.net/projects/minidlna-web/" target="_blank">Sourceforge</a>|
+ <a href="https://sourceforge.net/u/paulchen2013/" target="_blank">paulchen2013</a></td> 
 <tr>
 </table>
 </body>
