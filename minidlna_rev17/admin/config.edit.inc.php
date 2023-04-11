@@ -31,6 +31,7 @@ function activeDialog(id) {
       break;
   };
 };
+
 </script>
  <meta name="language" content="<?php print $_SESSION['lang']; ?>" />
  <meta name="content-language" content="<?php print $_SESSION['lang']; ?>" />
@@ -39,6 +40,16 @@ function activeDialog(id) {
  require_once("../lng/".$_SESSION['lang'].".lng");
  // Config einbinden
  require_once("../inc/config.inc.php");
+ // Klasse einbinden
+ require_once("../default/fkt.allgemein.inc.php");
+ require_once("../default/cls.error.inc.php"); 
+ // Klasse instanzieren
+ try
+ {
+   $qPHP = new PHP_func();
+ } catch(ExtException $e) {
+   print $e->errorMessage();  
+ } 
  ?>
 </head>
 <body>
@@ -49,18 +60,22 @@ $conFiles = new conFiles();
 if(isset($_POST['submit'])) {
   $content_old = "";
   $filename = "../inc/config.inc.php";
-  foreach(array_map('htmlentities',file($filename)) as $line) { $content_old .= $line; } 
+  //foreach(array_map('htmlentities',file($filename)) as $line) { $content_old .= $line; } 
+  foreach(file($filename) as $line) { $content_old .= $line; } 
   $content_new = $content_old; 
   $content_new = str_replace("path_to_db = '".$path_to_db."';","path_to_db = '".$_POST['value1']."';",$content_new);
+  $content_new = str_replace("server_http = '".$server_http."';","server_http = '".$_POST['value11']."';",$content_new);
   $content_new = str_replace("debug_sqls = '".$debug_sqls."';","debug_sqls = '".$_POST['value2']."';",$content_new);
-  $content_new = str_replace("fdownload  = '".$fdownload."';" ,"fdownload  = '".$_POST['value3']."';",$content_new);
+  $content_new = str_replace("fdownload  = '".$fdownload."';","fdownload  = '".$_POST['value3']."';",$content_new);
   $content_new = str_replace("jdownload  = '".$jdownload."';", "jdownload  = '".$_POST['value4']."';",$content_new);
   // DBManager 2022
-  $content_new = str_replace("password  = '".$password."';", "password  = '".$_POST['value9']."';",$content_new);
-  $content_new = str_replace("theme  = '".$theme."';", "theme  = '".$_POST['value10']."';",$content_new);
+  $content_new = str_replace("password  = '".$password."';","password  = '".$_POST['value9']."';",$content_new);
+  $content_new = str_replace("theme  = '".$theme."';","theme  = '".$_POST['value10']."';",$content_new);
+
   if(is_writable($filename) && $content_old!==$content_new) {
     file_put_contents($filename,html_entity_decode($content_new));
     $path_to_db = $_POST['value1'];
+    $server_http = $_POST['value11'];
     $debug_sql  = $_POST['value2'];
     $fdownload  = $_POST['value3'];
     $jdownload  = $_POST['value4'];
@@ -74,16 +89,13 @@ if(isset($_POST['submit'])) {
   }
   $content_old = "";  
   $filename = "../script/dlcapi.class.php";
-  foreach(array_map('htmlentities',file($filename)) as $line) { $content_old .= $line; }
+  //foreach(array_map('htmlentities',file($filename)) as $line) { $content_old .= $line; }
+  foreach(file($filename) as $line) { $content_old .= $line; }
   $content_new = $content_old;  
-  $content_new = str_replace("const dlc_content_generator_id 		= '".constant("conFiles::dlc_content_generator_id")."';",
-                       "const dlc_content_generator_id 		= '".$_POST['value5']."';",$content_new);
-  $content_new = str_replace("const dlc_content_generator_name 	= '".constant("conFiles::dlc_content_generator_name")."';",
-                       "const dlc_content_generator_name 	= '".$_POST['value6']."';",$content_new);
-  $content_new = str_replace("const dlc_content_generator_url 	= '".constant("conFiles::dlc_content_generator_url")."';",
-                       "const dlc_content_generator_url 	= '".$_POST['value7']."';",$content_new);
-  $content_new = str_replace("const dlc_cache_keys_filename		= '".constant("conFiles::dlc_cache_keys_filename")."';",
-                       "const dlc_cache_keys_filename		= '".$_POST['value8']."';",$content_new);
+  $content_new = str_replace(constant("conFiles::dlc_content_generator_id"),$_POST['value5'],$content_new);
+  $content_new = str_replace(constant("conFiles::dlc_content_generator_name"),$_POST['value6'],$content_new);
+  $content_new = str_replace(constant("conFiles::dlc_content_generator_url"),$_POST['value7'],$content_new);
+  $content_new = str_replace(constant("conFiles::dlc_cache_keys_filename"),$_POST['value8'],$content_new);
   if(is_writable($filename) && $content_old!==$content_new) {
     file_put_contents($filename,html_entity_decode($content_new));
     print "<h1>".$mlng['edit_cfg2_true']."</h1>";
@@ -104,6 +116,9 @@ print "<td class='edit_t'>".$mlng['edit_db']."</td>";
 print "<td class='edit_u'><input type='text' name='value1' id='value1' value='$path_to_db' size='100%' />
        <input type='button' name='vbutton1' onclick='javascript:activeDialog(1);' value='".$mlng['edit_selF1']."' />
        <br /><i>".$mlng['edit_db_desc']."</i></td><td rowspan='4'><div id='vFile1' class='demo1'></div></td></tr>\n<tr>";
+print "<tr><td class='edit_t'>".$mlng['edit_http']."</td>";
+print "<td class='edit_u'><input type='text' name='value11' id='value11' value='$server_http' size='100%' />
+       <br /><i>".$mlng['edit_http_desc']."</i></td></tr>\n";
 print "<td class='edit_t'>".$mlng['edit_sql']."</td><td class='edit_u'>";
 if($debug_sqls=='false') {
   print "<input type='radio' name='value2' value='true' />".$mlng['edit_sql_true']."  ";
