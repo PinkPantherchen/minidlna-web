@@ -1,0 +1,18 @@
+<?php
+// Absoluter Pfad zur Datenbank
+$path_to_db = '/FS1/AUSTAUSCH/WEB/minidlna/files.db';
+// Debug SQL: SQL-Queries anzeigen (true = ja, false = nein)
+$debug_sqls = 'false';
+// Show Content be downloadable (true = ja, false = nein)
+// If you use downloader, please modifie the "script/dlcapi.class.php" - Line: 57 - 69!
+// Especially: Line 64 + 66 .. with the Host/Path
+$fdownload  = 'true';
+// Create Bulk-Download Files (DLC/CCF/RSDF) (true = ja, false = nein)
+$jdownload  = 'true';
+// phpLiteAdmin Password
+$password  = 'admin';
+// phpLiteAdmin Theme
+$theme  = '../db/theme/Retro/phpliteadmin.css';
+// phpLiteAdmin Language
+$language = $_SESSION['lang'];
+?>
