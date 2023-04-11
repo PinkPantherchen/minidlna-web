@@ -12,6 +12,19 @@ $mlng['artist']   = 'Artist';
 $mlng['genre']    = 'Genere';
 $mlng['downloal'] = 'Scarica il file da [PATH]';
 $mlng['download'] = 'Scarica file';
+// Ultimi file
+$mlng['last_items'] = 'Ultimi file inseriti';
+$mlng['last_time']  = 'Data/Ora';
+$mlng['last_title'] = 'Nombre del archivo';
+$mlng['last_size']  = 'Dimensione file';
+$mlng['last_path']  = 'Percorso file';
+$mlng['start_page'] = 'Pagina iniziale';
+// Titolo della pagina
+$mlng['abfrage_liste']  = 'Elenco dei file in una directory<hr>';
+$mlng['abfrage_single'] = 'Singolo elemento => mostra dettagli<hr>';
+$mlng['abfrage_genre']  = 'Tutte le voci di un genere<hr>';
+$mlng['abfrage_artist'] = 'Tutte le voci di un artista<hr>';
+$mlng['abfrage_search'] = 'Cerca<hr>';
 // Amministrazione
 $mlng['edit_setting']     = 'Modifica le impostazioni di sistema';
 $mlng['edit_cfg1']        = '<h2><u>File:</u> <b>inc/config.inc.php</b></h2>';
@@ -20,6 +33,8 @@ $mlng['edit_cfg1_false1'] = '<h2><u>inc/config.inc.php:</u> <b style="color: #77
 $mlng['edit_cfg1_false2'] = '<h2><u>inc/config.inc.php:</u> <b style="color: #770000;">non potrebbe essere scritto!</b></h2>';
 $mlng['edit_db']          = 'Databasepath:';
 $mlng['edit_db_desc']     = '(Percorso assoluto al database)';
+$mlng['edit_http']        = 'Interfaccia Web del server MINIDLNA';
+$mlng['edit_http_desc']   = '(es. http://minidlna:8200)';
 $mlng['edit_sql']         = 'Debug-SQL:';
 $mlng['edit_sql_desc']    = '(Mostra query SQL)';
 $mlng['edit_sql_true']    = 'Sì | ';

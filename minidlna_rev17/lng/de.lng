@@ -12,6 +12,19 @@ $mlng['artist']   = 'Artist';
 $mlng['genre']    = 'Genre';
 $mlng['downloal'] = 'Datei von [PATH] herunterladen';
 $mlng['download'] = 'Datei herunterladen';
+// Letzte Dateien
+$mlng['last_items'] = 'Zuletzt eingespielte Dateien';
+$mlng['last_time']  = 'Datum/Uhrzeit';
+$mlng['last_title'] = 'Dateiname';
+$mlng['last_size']  = 'Dateigroesse';
+$mlng['last_path']  = 'Dateipfad';
+$mlng['start_page'] = 'Startseite';
+// Seitenueberschrift
+$mlng['abfrage_liste']  = 'Liste der Dateien in einem Verzeichnis<hr>';
+$mlng['abfrage_single'] = 'Einzelnes Element => Details anzeigen<hr>';
+$mlng['abfrage_genre']  = 'Alle Eintraege eines Genre<hr>';
+$mlng['abfrage_artist'] = 'Alle Eintraege eines Artisten<hr>';
+$mlng['abfrage_search'] = 'Suche<hr>';
 // Administration
 $mlng['edit_setting']     = 'Systemeinstellungen bearbeiten';
 $mlng['edit_cfg1']        = '<h2><u>Datei:</u> <b>inc/config.inc.php</b></h2>';
@@ -20,6 +33,8 @@ $mlng['edit_cfg1_false1'] = '<h2><u>inc/config.inc.php:</u> <b style="color: #77
 $mlng['edit_cfg1_false2'] = '<h2><u>inc/config.inc.php:</u> <b style="color: #770000;">konnte nicht geschieben werden!</b></h2>';
 $mlng['edit_db']          = 'Datenbank-Pfad:';
 $mlng['edit_db_desc']     = '(Absoluter Pfad zur Datenbank)';
+$mlng['edit_http']        = 'MINIDLNA-Server Webinterface';
+$mlng['edit_http_desc']   = '(z.B. http://minidlna:8200)';
 $mlng['edit_sql']         = 'Debug-SQL:';
 $mlng['edit_sql_desc']    = '(SQL-Queries anzeigen)';
 $mlng['edit_sql_true']    = 'Ja | ';
